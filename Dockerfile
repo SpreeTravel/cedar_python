@@ -17,6 +17,7 @@ WORKDIR /app/user
 # Heroku already has a mechanism for running .profile.d scripts,
 # so this is just for local parity
 COPY ./init /usr/bin/init
+RUN chmod +x /usr/bin/init
 
 # Install Python
 RUN curl -s https://lang-python.s3.amazonaws.com/cedar-14/runtimes/$PYTHON_VERSION.tar.gz | tar zx -C /app/.heroku/python
