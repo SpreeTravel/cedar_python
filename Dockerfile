@@ -32,4 +32,4 @@ RUN chmod +x /app/.profile.d/python.sh
 RUN mkdir -p /app/buildpack
 RUN git clone https://github.com/heroku/heroku-buildpack-python.git /app/buildpack
 
-ENTRYPOINT ["/usr/bin/init"]
+RUN /usr/bin/init
