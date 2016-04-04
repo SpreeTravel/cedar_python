@@ -32,9 +32,4 @@ RUN chmod +x /app/.profile.d/python.sh
 RUN mkdir -p /app/buildpack
 RUN git clone https://github.com/heroku/heroku-buildpack-python.git /app/buildpack
 
-RUN mkdir -p /app/bpwatch
-RUN git clone https://github.com/kennethreitz/bpwatch.git /app/bpwatch
-RUN cd /app/bpwatch && make
-ENV PATH /app/bpwatch/:$PATH
-
 RUN /usr/bin/init
