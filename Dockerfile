@@ -29,7 +29,7 @@ RUN curl -s https://bootstrap.pypa.io/get-pip.py | /app/.heroku/python/bin/pytho
 RUN echo 'export PATH=$HOME/.heroku/python/bin:$PATH PYTHONUNBUFFERED=true PYTHONHOME=/app/.heroku/python LIBRARY_PATH=/app/.heroku/vendor/lib:/app/.heroku/python/lib:$LIBRARY_PATH LD_LIBRARY_PATH=/app/.heroku/vendor/lib:/app/.heroku/python/lib:$LD_LIBRARY_PATH LANG=${LANG:-en_US.UTF-8} PYTHONHASHSEED=${PYTHONHASHSEED:-random} PYTHONPATH=${PYTHONPATH:-/app/user/}' > /app/.profile.d/python.sh
 RUN chmod +x /app/.profile.d/python.sh
 
-RUN mkdir -p /app/buildpack
-RUN git clone https://github.com/heroku/heroku-buildpack-python.git /app/buildpack
+# RUN mkdir -p /app/buildpack
+# RUN git clone https://github.com/heroku/heroku-buildpack-python.git /app/buildpack
 
 RUN /usr/bin/init
